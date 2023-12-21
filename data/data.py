@@ -46,3 +46,21 @@ def deadline_score(pass_date, deadline_date):
         else:
             return 0
 
+
+def late_list(grades, deadline_date):
+    latecomers = []
+    stu_del = []
+    for key, value in grades.items():
+        if check_data(value) == "Wrong":
+            stu_del.append(key)
+            print(key, "будет удалён из-за неверной даты")
+    for i in stu_del:
+        grades.pop(i)
+    if check_data(deadline_date) == "Wrong":
+        return "Введённые данные неверны. Формат ввода: DD.MM.YYYY"
+    else:
+        for key, value in grades.items():
+            if deadline_score(value, deadline_date) < 5:
+                latecomers.append(key)
+        return latecomers
+
