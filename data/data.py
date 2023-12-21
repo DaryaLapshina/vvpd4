@@ -64,3 +64,34 @@ def late_list(grades, deadline_date):
                 latecomers.append(key)
         return latecomers
 
+
+def main():
+    """Функция для загрузки данных из файла"""
+
+    while True:
+
+        answ = input("\n1. дата сдачи и дедлайн"
+                     "\n2. список и дедлайн"
+                     "\n3. Выход"
+                     "\nВаше действие: ")
+
+        match answ:
+            case '1':
+                data = input('Дата сдачи: ')
+                deadline = input('Дата дедлайна: ')
+                print(deadline_score(data, deadline))
+            case '2':
+                student = input("Словарь (Имя:дата сдачи): ").split(" ")
+                a = convertor(student)
+                deadline = input('Дата дедлайна: ')
+                print(late_list(a, deadline))
+
+            case '3':
+                print("Программа завершена.")
+                break
+
+            case _:
+                print("Неверно выбранное действие.")
+
+
+main()
