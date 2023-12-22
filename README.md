@@ -3,7 +3,6 @@
 ---
 * Определение балла за дату сдачи и дедлайн
 
----
 
 ##### Пример:
 
@@ -22,6 +21,7 @@
 [«Иванов»]
 
 ```
+---
 
 ### Morning routine
 1. Wake up
@@ -35,6 +35,7 @@
 - [X] bring the water to a boil
 - [X] pour boiling water over the tea leaves
 - [X] after 5 minutes, drain the first water and pour boiling water a second time
+
 ---
 ### The Formula of the success
 *a* - first side (tipo katet)
